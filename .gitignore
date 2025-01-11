@@ -1,0 +1,16 @@
+# .gitignore 文件内容
+# 虚拟环境
+.venv/
+venv/
+
+# 构建产物
+dist/
+build/
+*.egg-info/
+
+# 缓存和IDE文件
+__pycache__/
+*.py[cod]
+.DS_Store
+.idea/
+.vscode/
