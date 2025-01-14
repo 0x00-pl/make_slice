@@ -4,11 +4,14 @@ version = "0.1.0"
 description = ""
 authors = ["pl <0x00.pl@gmail.com>"]
 readme = "README.md"
-package = {include = ["make_slice"]}
+packages = [{ include = "make_slice" }]
 
 [tool.poetry.dependencies]
 python = "^3.12"
 
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.4.0"
 
 [build-system]
 requires = ["poetry-core"]
