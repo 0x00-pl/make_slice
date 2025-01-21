@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "make-slice"
-version = "0.1.0"
+version = "0.1.1"
 description = ""
 authors = ["pl <0x00.pl@gmail.com>"]
 readme = "README.md"
