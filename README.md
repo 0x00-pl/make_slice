@@ -1,6 +1,6 @@
 # make-slice
 
-Creates slice objects with clean syntax 
+Creates slice objects with clean syntax.
 
 ## Install
 
@@ -18,3 +18,8 @@ s = make_slice[1:10:2]  # Equivalent to slice(1, 10, 2)
 my_list = list(range(20))
 print(my_list[s])  # Output: [1, 3, 5, 7, 9]
 ```
+
+
+## License
+
+MIT License - See [LICENSE](LICENSE) for details.
