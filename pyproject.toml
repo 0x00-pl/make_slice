@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "make-slice"
-version = "0.1.1"
+version = "0.1.2"
 description = "Creates slice objects with clean syntax."
 authors = ["pl <0x00.pl@gmail.com>"]
 license = "MIT"
