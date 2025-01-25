@@ -1,0 +1,17 @@
+name: Publish
+on: [release]
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+      - run: pip install poetry
+      - run: poetry build
+      - run: poetry config repositories.testpypi https://test.pypi.org/legacy/
+      - run: poetry publish -r testpypi
+        env:
+          PYPI_TOKEN: ${{ secrets.TEST_PYPI_TOKEN }}
+      - run: poetry publish
+        env:
+          PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
