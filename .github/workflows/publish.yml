@@ -1,17 +1,43 @@
 name: Publish
-on: [release]
+on:
+  release:
+    types: [published]  # 明确触发条件
+
 jobs:
   publish:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write  # 最小权限原则
+
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-      - run: pip install poetry
-      - run: poetry build
-      - run: poetry config repositories.testpypi https://test.pypi.org/legacy/
-      - run: poetry publish -r testpypi
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install Poetry
+        run: pip install poetry
+
+      - name: Build package
+        run: poetry build
+
+      - name: Publish to TestPyPI
         env:
-          PYPI_TOKEN: ${{ secrets.TEST_PYPI_TOKEN }}
-      - run: poetry publish
+          TEST_PYPI_TOKEN: ${{ secrets.TEST_PYPI_TOKEN }}
+        run: |
+          poetry config repositories.testpypi https://test.pypi.org/legacy/
+          poetry publish -r testpypi
+
+      - name: Verify TestPyPI upload
+        run: |
+          pip install --index-url https://test.pypi.org/simple/ --no-deps your-package-name
+          python -c "from make_slice import make_slice; assert [1, 2, 3][make_slice[::-1]] == [3, 2, 1]"
+
+      - name: Publish to PyPI
+        if: success()  # 只有 TestPyPI 成功后才发布正式版
         env:
           PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
+        run: poetry publish
