@@ -33,7 +33,7 @@ jobs:
 
       - name: Verify TestPyPI upload
         run: |
-          pip install --index-url https://test.pypi.org/simple/ --no-deps your-package-name
+          pip install --index-url https://test.pypi.org/simple/ --no-deps make_slice
           python -c "from make_slice import make_slice; assert [1, 2, 3][make_slice[::-1]] == [3, 2, 1]"
 
       - name: Publish to PyPI
