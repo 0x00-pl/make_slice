@@ -22,7 +22,9 @@ jobs:
         run: pip install poetry
 
       - name: Build package
-        run: poetry build
+        run: |
+          poetry build
+          twine check dist/*
 
       - name: Publish to TestPyPI
         env:
