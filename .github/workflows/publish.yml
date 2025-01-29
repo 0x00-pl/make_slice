@@ -21,6 +21,12 @@ jobs:
       - name: Install Poetry
         run: pip install poetry
 
+      - name: Install dependencies
+        run: poetry install --with dev
+
+      - name: Test project
+        run: pytest tests
+
       - name: Build package
         run: |
           poetry build
