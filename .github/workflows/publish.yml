@@ -31,13 +31,12 @@ jobs:
         run: |
           poetry build
           poetry run twine check dist/*
+          poetry config repositories.testpypi https://test.pypi.org/legacy/
 
       - name: Publish to TestPyPI
         env:
           PYPI_TOKEN: ${{ secrets.TEST_PYPI_TOKEN }}
-        run: |
-          poetry config repositories.testpypi https://test.pypi.org/legacy/
-          poetry publish -r testpypi
+        run: poetry publish -r testpypi
 
       - name: Verify TestPyPI upload
         run: |
