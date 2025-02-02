@@ -35,7 +35,7 @@ jobs:
 
       - name: Publish to TestPyPI
         env:
-          PYPI_TOKEN: ${{ secrets.TEST_PYPI_TOKEN }}
+          POETRY_PYPI_TOKEN_TESTPYPI: ${{ secrets.TEST_PYPI_TOKEN }}
         run: poetry publish -r testpypi
 
       - name: Verify TestPyPI upload
@@ -46,5 +46,5 @@ jobs:
       - name: Publish to PyPI
         if: success()  # 只有 TestPyPI 成功后才发布正式版
         env:
-          PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
+          POETRY_PYPI_TOKEN_PYPI: ${{ secrets.PYPI_TOKEN }}
         run: poetry publish
