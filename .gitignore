@@ -9,6 +9,7 @@ build/
 *.egg-info/
 .tox/
 .coverage
+coverage.xml
 
 # 缓存和IDE文件
 __pycache__/
