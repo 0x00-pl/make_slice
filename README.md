@@ -2,8 +2,7 @@
 
 Creates slice objects with clean syntax.
 
-[![cov](https://0x00-pl.github.io/make_slice//badges/coverage.svg)](https://github.com/0x00-pl/make_slice/actions)
-
+[![cov](https://0x00-pl.github.io/make_slice/badges/coverage.svg)](https://github.com/0x00-pl/make_slice/actions)
 
 ## Install
 
