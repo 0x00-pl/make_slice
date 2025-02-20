@@ -2,8 +2,12 @@
 
 Creates slice objects with clean syntax.
 
+![](https://img.shields.io/github/license/0x00-pl/make_slice.svg)
 [![PyPI](https://img.shields.io/pypi/v/make-slice?logo=pypi&label=PyPI%20package)](https://pypi.org/project/make-slice/)
-[![cov](https://0x00-pl.github.io/make_slice/badges/coverage.svg)](https://github.com/0x00-pl/make_slice/actions)
+![](https://img.shields.io/github/release/0x00-pl/make_slice)
+![cov](https://0x00-pl.github.io/make_slice/badges/coverage.svg)
+![](https://img.shields.io/github/issues/0x00-pl/make_slice)
+![](https://img.shields.io/github/stars/0x00-pl/make_slice) 
 
 ## Install
 
