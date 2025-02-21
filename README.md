@@ -7,7 +7,7 @@ Creates slice objects with clean syntax.
 ![](https://img.shields.io/github/release/0x00-pl/make_slice)
 ![cov](https://0x00-pl.github.io/make_slice/badges/coverage.svg)
 ![](https://img.shields.io/github/issues/0x00-pl/make_slice)
-![](https://img.shields.io/github/stars/0x00-pl/make_slice) 
+![](https://img.shields.io/github/stars/0x00-pl/make_slice)
 
 ## Install
 
@@ -27,6 +27,14 @@ rev_slice = make_slice[::-1]  # Equivalent to slice(None, None, -1)
 print(my_list[rev_slice])  # Output: [4, 3, 2, 1, 0]
 ```
 
+## Development
+
+use `pre-commit` to run reformatting and linting:
+
+```bash
+pre-commit install
+pre-commit run --all-files
+```
 
 ## License
 
