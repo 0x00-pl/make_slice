@@ -15,6 +15,8 @@ python = ">=3.9"
 pytest = "^8.4.0"
 pytest-cov = "^6.1.1"
 twine = "^6.1.0"
+mdformat = "^0.7.22"
+pre-commit = "^4.2.0"
 
 [build-system]
 requires = ["poetry-core"]
