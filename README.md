@@ -29,6 +29,13 @@ print(my_list[rev_slice])  # Output: [4, 3, 2, 1, 0]
 
 ## Development
 
+use `poetry` to manage dependencies and virtual environments:
+
+```bash
+pip install poetry
+poetry install
+```
+
 use `pre-commit` to run reformatting and linting:
 
 ```bash
