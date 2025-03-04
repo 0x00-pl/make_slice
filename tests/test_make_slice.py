@@ -1,5 +1,7 @@
 """test for make_slice.py."""
 
+from __future__ import annotations
+
 from make_slice import MakeSlice, make_slice
 
 
