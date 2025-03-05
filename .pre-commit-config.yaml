@@ -1,12 +1,12 @@
 repos:
   - repo: https://github.com/executablebooks/mdformat
-    rev: 0.7.16
+    rev: 0.7.22
     hooks:
       - id: mdformat
         additional_dependencies: ["mdformat-black"]
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.4.1  # 使用最新版本
+    rev: v0.11.13  # 使用最新版本
     hooks:
       - id: ruff
         args: [ --fix, --exit-non-zero-on-fix ]

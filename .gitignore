@@ -10,6 +10,7 @@ build/
 .tox/
 .coverage
 coverage.*
+htmlcov
 
 # 缓存和IDE文件
 __pycache__/
