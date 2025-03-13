@@ -5,6 +5,7 @@ venv/
 
 # 构建产物
 dist/
+site/
 build/
 *.egg-info/
 .tox/
