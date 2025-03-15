@@ -1,5 +1,5 @@
 # API 参考
 
-::: make_slice.core
-    options:
-      show_source: true
+::: make_slice
+options:
+show_source: true
