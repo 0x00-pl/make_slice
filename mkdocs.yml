@@ -1,0 +1,32 @@
+site_name: Make-Slice Documentation
+site_url: https://0x00-pl.github.io/make_slice/
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - search.suggest
+    - search.highlight
+  palette:
+    primary: deep purple
+    accent: amber
+
+plugins:
+  - search:
+      lang:
+        - en
+        - zh
+      separator: '[\s\-\.，。？、]+'
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [ make_slice ]  # 指定源代码路径
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+
+nav:
+  - 首页: index.md
+  - API 参考: api.md
+  - 关于: about.md
