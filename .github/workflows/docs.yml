@@ -8,5 +8,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-      - run: pip install mkdocs mkdocs-material
+      - run: pip install mkdocs mkdocs-material mkdocstrings
       - run: mkdocs gh-deploy --force
