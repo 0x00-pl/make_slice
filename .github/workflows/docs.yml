@@ -9,4 +9,5 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
       - run: pip install mkdocs mkdocs-material mkdocstrings-python
+      - run: pip install .  # 安装本地包，确保文档可以正确引用
       - run: mkdocs gh-deploy --force
