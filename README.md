@@ -27,6 +27,22 @@ rev_slice = make_slice[::-1]  # Equivalent to slice(None, None, -1)
 print(my_list[rev_slice])  # Output: [4, 3, 2, 1, 0]
 ```
 
+## Documentation
+
+Online Documentation is available at [0x00-pl.github.io/make_slice](https://0x00-pl.github.io/make_slice/).
+
+Local server Documentation can be started using `mkdocs`:
+
+```bash
+mkdocs serve  # Serves the Documentation at localhost:8000 by default.
+```
+
+Offline Documentation can be built using `mkdocs`:
+
+```bash
+mkdocs build  # Generates static Documentation files in the 'site' directory.
+```
+
 ## Development
 
 use `poetry` to manage dependencies and virtual environments:
