@@ -60,6 +60,9 @@ pre-commit autoupdate
 pre-commit run --all-files
 ```
 
+If you got `files were modified by this hook` when runnint `git commit`,
+you can run `git add .` to stage the changes and then commit again.
+
 ## License
 
 MIT License - See [LICENSE](LICENSE) for details.
