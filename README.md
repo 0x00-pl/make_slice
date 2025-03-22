@@ -60,7 +60,7 @@ pre-commit autoupdate
 pre-commit run --all-files
 ```
 
-If you got `files were modified by this hook` when runnint `git commit`,
+If you got `files were modified by this hook` when running `git commit`,
 you can run `git add .` to stage the changes and then commit again.
 
 ## License
