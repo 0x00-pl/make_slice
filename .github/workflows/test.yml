@@ -17,25 +17,3 @@ jobs:
       - name: Run tests with all Python versions
         run: tox -e py${{ matrix.python-version }}
 
-  coverage:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
-      - name: Install dependencies
-        run: |
-          pip install poetry
-          poetry install --with=dev
-
-      - name: Run tests with coverage
-        run: poetry run pytest -v --cov=make_slice --cov-report=html --cov-report=xml --cov-report=json tests/
-
-      - name: Update Coverage Badge
-        # GitHub actions: default branch variable
-        # https://stackoverflow.com/questions/64781462/github-actions-default-branch-variable
-        if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
-        uses: we-cli/coverage-badge-action@main
-
