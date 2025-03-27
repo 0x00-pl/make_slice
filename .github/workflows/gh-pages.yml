@@ -1,4 +1,4 @@
-name: Deploy Docs
+name: Deploy gh-pages
 on:
   push:
     branches: [master]
@@ -19,7 +19,7 @@ jobs:
           poetry run pytest -v 
           --junitxml=docs/reports/pytest/report.xml
           --html=docs/reports/pytest/report.html --self-contained-html 
-          --cov=make_slice --cov-reports=html:docs/reports/htmlcov --cov-reports=xml:docs/reports 
+          --cov=make_slice --cov-report=html:docs/reports/htmlcov --cov-report=xml:docs/reports 
           tests/
 
       - name: generate coverage badge
