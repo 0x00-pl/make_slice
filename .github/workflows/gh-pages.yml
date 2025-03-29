@@ -17,14 +17,14 @@ jobs:
       - name: Run tests with coverage
         run: >
           poetry run pytest -v 
-          --junitxml=docs/reports/pytest/report.xml
-          --html=docs/reports/pytest/report.html --self-contained-html 
+          --junitxml=docs/reports/pytest.xml
+          --html=docs/reports/pytest.html --self-contained-html 
           --cov=make_slice --cov-report=html:docs/reports/htmlcov --cov-report=xml:docs/reports/coverage.xml
           tests/
 
       - name: generate coverage badge
         run: |
-          poetry run genbadge test -i docs/reports/pytest/report.xml -o docs/reports/tests-badge.svg
+          poetry run genbadge tests -i docs/reports/pytest.xml -o docs/reports/tests-badge.svg
           poetry run genbadge coverage -i docs/reports/coverage.xml -o docs/reports/coverage-badge.svg
 
   deploy-doc:
