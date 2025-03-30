@@ -27,12 +27,5 @@ jobs:
           poetry run genbadge tests -i docs/reports/pytest.xml -o docs/reports/tests-badge.svg
           poetry run genbadge coverage -i docs/reports/coverage.xml -o docs/reports/coverage-badge.svg
 
-  deploy-doc:
-    runs-on: ubuntu-latest
-    needs: coverage
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-      - run: pip install mkdocs mkdocs-material mkdocstrings-python
-      - run: pip install .  # 安装本地包，确保文档可以正确引用
-      - run: mkdocs gh-deploy --force
+      - name: Generate mkdocs site and deploy to gh-pages
+        run: mkdocs gh-deploy --force
