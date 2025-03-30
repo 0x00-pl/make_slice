@@ -28,4 +28,4 @@ jobs:
           poetry run genbadge coverage -i docs/reports/coverage.xml -o docs/reports/coverage-badge.svg
 
       - name: Generate mkdocs site and deploy to gh-pages
-        run: mkdocs gh-deploy --force
+        run: poetry run mkdocs gh-deploy --force
