@@ -1,4 +1,4 @@
-name: test
+name: test multiple Python versions
 
 on: [push, pull_request]
 
