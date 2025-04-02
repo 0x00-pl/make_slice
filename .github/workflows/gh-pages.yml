@@ -19,7 +19,7 @@ jobs:
           poetry run pytest -v 
           --junitxml=docs/reports/pytest.xml
           --html=docs/reports/pytest.html --self-contained-html 
-          --cov=make_slice --cov-report=html:docs/reports/htmlcov --cov-report=xml:docs/reports/coverage.xml
+          --cov=make_slice --cov-report=html:docs/reports/coverage --cov-report=xml:docs/reports/coverage.xml
           tests/
 
       - name: generate tests and coverage badge
