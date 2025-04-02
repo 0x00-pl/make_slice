@@ -22,7 +22,7 @@ jobs:
           --cov=make_slice --cov-report=html:docs/reports/htmlcov --cov-report=xml:docs/reports/coverage.xml
           tests/
 
-      - name: generate coverage badge
+      - name: generate tests and coverage badge
         run: |
           poetry run genbadge tests -i docs/reports/pytest.xml -o docs/reports/tests-badge.svg
           poetry run genbadge coverage -i docs/reports/coverage.xml -o docs/reports/coverage-badge.svg
