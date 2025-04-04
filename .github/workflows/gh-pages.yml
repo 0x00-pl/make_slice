@@ -1,7 +1,8 @@
 name: Deploy test, coverage and mkdocs into gh-pages
 on:
   push:
-    branches: [master]
+    branches: [${{ github.event.repository.default_branch }}]
+
 jobs:
   coverage:
     runs-on: ubuntu-latest
